@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cNH-TG-lXh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XAP-0Q-dhS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -240,9 +240,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="teacherClicked" destination="SeY-HZ-lWw" id="vzU-2S-PxI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rea-tU-4iV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="5yT-QN-UsJ" customClass="ClassesTableViewCell" customModule="H2HSDKIntegrationSample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewClassesCell" rowHeight="120" id="5yT-QN-UsJ" customClass="ClassesTableViewCell" customModule="H2HSDKIntegrationSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5yT-QN-UsJ" id="lvt-TM-2ow">
@@ -350,6 +347,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="enP-ov-8jS"/>
+                    <connections>
+                        <outlet property="tableView" destination="XEf-fk-fFU" id="F8h-DC-qdk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNF-KL-qlO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1855,11 +1855,11 @@
             </objects>
             <point key="canvasLocation" x="2443" y="1999"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="IoX-VW-tdC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u6Z-8h-zQ9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6Ao-4I-7oU"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="6Ao-4I-7oU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x6F-al-hb7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

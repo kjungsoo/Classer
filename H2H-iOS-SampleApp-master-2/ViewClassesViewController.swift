@@ -10,13 +10,13 @@ import UIKit
 
 class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var ClassesTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var classes = []
+    var classes = ["xya", "abc"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        ClassesTableView.delegate = self
-        ClassesTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -27,14 +27,28 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return classes.count
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        <#code#>
+        //segue to specific meeting or description
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        let cell: ClassesTableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewClassesCell") as! ClassesTableViewCell
+
+        let course = classes[indexPath.row]
+        
+        cell.Author.text = " "
+        cell.classDescription.text = " "
+        cell.classTitle.text = "CS 101"
+        cell.classSchedule.text = " 232"
+        //add image cell.portrait =
+        
+      
+        
+        return cell
+
     }
+    
     
 
 }
