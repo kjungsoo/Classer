@@ -8,10 +8,24 @@
 
 import UIKit
 
-class SelectUserViewController: UIViewController {
+class SelectUserViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var student: UIButton!
+    @IBOutlet weak var teacher: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.applyGradient([Constants.Colors.mainColor, Constants.Colors.secondaryColor], locations: [0.2, 0.9, 0.9])
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        //a tap dismisses a keyboard
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyBoard")
+//        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
@@ -22,9 +36,31 @@ class SelectUserViewController: UIViewController {
     }
     
     @IBAction func teacherClicked(sender: AnyObject) {
+        student.backgroundColor = UIColor.clearColor()
+        teacher.backgroundColor = Constants.Colors.mainColor
     }
 
     @IBAction func studentClicked(sender: AnyObject) {
+        teacher.backgroundColor = UIColor.clearColor()
+        student.backgroundColor = Constants.Colors.mainColor
+    }
+    func dissmissKeyBoard(){
+        view.endEditing(true)
+
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        //isbnTextfield.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+        return false
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.view.endEditing(true)
+
     }
 
    

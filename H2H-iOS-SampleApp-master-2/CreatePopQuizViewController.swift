@@ -52,11 +52,11 @@ class CreatePopQuizViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: PopQuizTableViewCell = tableView.dequeueReusableCellWithIdentifier("PopQuizCell") as! PopQuizTableViewCell
         
-        cell.Question.text = "x "
-        cell.option1.text = "a "
-        cell.option2.text = " b"
-        cell.option3.text = " c"
-        cell.option4.text = "d"
+        cell.Question.text = ""
+        cell.option1.text = ""
+        cell.option2.text = ""
+        cell.option3.text = ""
+        cell.option4.text = ""
         
         
         

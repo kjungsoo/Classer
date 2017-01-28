@@ -32,6 +32,9 @@
 		57DD7BB21D47192500CB411E /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DD7BB11D47192500CB411E /* DatePickerViewController.swift */; };
 		9244742A1E3C628300E5E4B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924474261E3C628300E5E4B5 /* LaunchScreen.storyboard */; };
 		9244742B1E3C628300E5E4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924474281E3C628300E5E4B5 /* Main.storyboard */; };
+		9294D0151E3CE3E400E5FA67 /* CustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D0141E3CE3E400E5FA67 /* CustomDesign.swift */; };
+		9294D0171E3CE97100E5FA67 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D0161E3CE97100E5FA67 /* CreateAccountViewController.swift */; };
+		92A4518F1E3CCDA9002F8146 /* PopQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A4518E1E3CCDA9002F8146 /* PopQuizTableViewCell.swift */; };
 		92C71FFC1E3C73D200E7C2B9 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C71FF91E3C73D200E7C2B9 /* ClassesTableViewCell.swift */; };
 		92C71FFD1E3C73D200E7C2B9 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C71FFA1E3C73D200E7C2B9 /* SelectUserViewController.swift */; };
 		92C71FFE1E3C73D200E7C2B9 /* ViewClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C71FFB1E3C73D200E7C2B9 /* ViewClassesViewController.swift */; };
@@ -110,6 +113,9 @@
 		5C5274A678F30C78477B9CAC /* Pods-H2HSDKIntegrationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H2HSDKIntegrationSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-H2HSDKIntegrationSample/Pods-H2HSDKIntegrationSample.debug.xcconfig"; sourceTree = "<group>"; };
 		924474271E3C628300E5E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = H2HSDKIntegrationSample/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		924474291E3C628300E5E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = H2HSDKIntegrationSample/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		9294D0141E3CE3E400E5FA67 /* CustomDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDesign.swift; sourceTree = SOURCE_ROOT; };
+		9294D0161E3CE97100E5FA67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = SOURCE_ROOT; };
+		92A4518E1E3CCDA9002F8146 /* PopQuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopQuizTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C71FF91E3C73D200E7C2B9 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C71FFA1E3C73D200E7C2B9 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = SOURCE_ROOT; };
 		92C71FFB1E3C73D200E7C2B9 /* ViewClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewClassesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -161,12 +167,15 @@
 			isa = PBXGroup;
 			children = (
 				924474261E3C628300E5E4B5 /* LaunchScreen.storyboard */,
+				9294D0141E3CE3E400E5FA67 /* CustomDesign.swift */,
+				9294D0161E3CE97100E5FA67 /* CreateAccountViewController.swift */,
 				92C71FF91E3C73D200E7C2B9 /* ClassesTableViewCell.swift */,
 				92C71FFA1E3C73D200E7C2B9 /* SelectUserViewController.swift */,
 				92C71FFB1E3C73D200E7C2B9 /* ViewClassesViewController.swift */,
 				92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */,
 				92C720031E3C800B00E7C2B9 /* MyClassesViewController.swift */,
 				924474281E3C628300E5E4B5 /* Main.storyboard */,
+				92A4518E1E3CCDA9002F8146 /* PopQuizTableViewCell.swift */,
 				92C7200B1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift */,
 				92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */,
 				92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */,
@@ -411,6 +420,7 @@
 				570C5A171D49B23F000CD7BE /* UserInfo.swift in Sources */,
 				57344ADB1D4094EE006E2D61 /* LoginTableViewController.swift in Sources */,
 				92C7200C1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift in Sources */,
+				9294D0151E3CE3E400E5FA67 /* CustomDesign.swift in Sources */,
 				92C71FFD1E3C73D200E7C2B9 /* SelectUserViewController.swift in Sources */,
 				57344AE01D41EDBE006E2D61 /* SelectionListViewController.swift in Sources */,
 				57344AD91D408F4A006E2D61 /* SignUpTableViewController.swift in Sources */,
@@ -420,6 +430,8 @@
 				57DD7BB21D47192500CB411E /* DatePickerViewController.swift in Sources */,
 				92C71FFE1E3C73D200E7C2B9 /* ViewClassesViewController.swift in Sources */,
 				57DD7BA71D45F03600CB411E /* LoadingViewController.swift in Sources */,
+				9294D0171E3CE97100E5FA67 /* CreateAccountViewController.swift in Sources */,
+				92A4518F1E3CCDA9002F8146 /* PopQuizTableViewCell.swift in Sources */,
 				57344AE31D425462006E2D61 /* ServerDetailsModel.swift in Sources */,
 				92C720061E3C857600E7C2B9 /* MyClassesTableViewCell.swift in Sources */,
 				57344ADD1D409E99006E2D61 /* StartMeetingTableViewController.swift in Sources */,

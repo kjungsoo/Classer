@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateClassViewController: UIViewController {
+class CreateClassViewController: UIViewController, UIPickerViewDelegate {
 
     // MARK: IBOutlets
 
@@ -21,7 +21,7 @@ class CreateClassViewController: UIViewController {
     // cell meeting description
     @IBOutlet weak var textFieldMeetingDescription: UITextView!
     
-    
+    var startDatePicking = true
     
     
     // cell meeting type
@@ -78,6 +78,7 @@ class CreateClassViewController: UIViewController {
     // the date user is interacting with
     var selectedDateType: SelectedDate = .StartDate
     
+    
     // default selected server location is set
     // if updated by the user, it is stored in this variable
     var selectedServerLocation: NSIndexPath = NSIndexPath(forRow: 0, inSection: 0)
@@ -85,15 +86,28 @@ class CreateClassViewController: UIViewController {
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.applyGradient([Constants.Colors.mainColor, Constants.Colors.secondaryColor], locations: [0.2, 0.9, 0.9])
+        //datePickerView.delegate = self
+
         // set view controller title & color
         self.navigationItem.title = "Schedule Meeting"
         self.navigationController?.navigationBar.tintColor
             = UIColor(red: 255/255.0, green: 107/255.0, blue: 100/255.0, alpha: 1.0)
         
         // initialize views
-        self.initializeViewsAndData()
+        //self.initializeViewsAndData()
+        let backButton = UIBarButtonItem(title: "Add Quiz", style: UIBarButtonItemStyle.Plain, target: self, action: "addQuestions")
+        navigationItem.rightBarButtonItem = backButton
+        
     }
+    
+    
+    
+    func addQuestions() {
+        // Do something
+        performSegueWithIdentifier("createPopQuizSegue", sender: nil)
+    }
+    
     
 
     @IBAction func createClass(sender: AnyObject) {
@@ -119,6 +133,38 @@ class CreateClassViewController: UIViewController {
    
     }
     
+ 
+    
+    @IBAction func startDatePick(sender: AnyObject) {
+        
+       // self.presentPicker()
+        startDatePicking = false
+
+    }
+    
+    @IBAction func endDatePick(sender: AnyObject) {
+       // self.presentPicker()
+
+    }
+    
+    
+    @IBAction func onDidChangeDateByOnStoryboard(sender: UIDatePicker) {
+        self.onDidChangeDate(sender)
+    }
+    
+    // called when the date picker called.
+    internal func onDidChangeDate(sender: UIDatePicker){
+        
+        // date format
+        let myDateFormatter: NSDateFormatter = NSDateFormatter()
+        myDateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
+        
+        // get the date string applied date format
+        let mySelectedDate: NSString = myDateFormatter.stringFromDate(sender.date)
+        labelSelectedStartDate.text = mySelectedDate as String
+    }
+    
+
 
   
     
@@ -419,7 +465,7 @@ class CreateClassViewController: UIViewController {
     // provide initial values/defaults to UI components
     func initializeViewsAndData() -> Void {
         
-        self.labelSelectedMeetingType.text = "Group Meeting"
+        //self.labelSelectedMeetingType.text = "Group Meeting"
         //  self.labelSelectedServerLocation.text = "Default"
         
         // add default server, to the list of servers available
@@ -730,3 +776,4 @@ class CreateClassViewController: UIViewController {
         return false
     }
 }
+
