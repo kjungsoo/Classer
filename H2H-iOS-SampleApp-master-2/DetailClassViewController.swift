@@ -39,7 +39,7 @@ class DetailClassViewController: UIViewController {
     
     @IBAction func joinClassClicked(sender: AnyObject) {
         self.buttonJoinMeetingClicked()
-
+        //performSegueWithIdentifier("testSegue", sender: nil)
         //check password
         //Go to meeting here
         
@@ -66,7 +66,7 @@ class DetailClassViewController: UIViewController {
         
         //        hard code here or fetech data from UI
         textFieldEmail = "ss42@stmarys-ca.edu"
-        textFieldMeetingID = "633550165"
+        textFieldMeetingID = "546445441"
         self.view.endEditing(true)
         
         if self.textFieldEmail != "" && self.textFieldMeetingID != ""

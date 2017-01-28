@@ -38,6 +38,7 @@
 		9294D01E1E3CFC1C00E5FA67 /* ClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D01C1E3CFC1C00E5FA67 /* ClassInfo.swift */; };
 		9294D01F1E3CFC1C00E5FA67 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D01D1E3CFC1C00E5FA67 /* Student.swift */; };
 		9294D0271E3D18FF00E5FA67 /* JoinClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D0261E3D18FF00E5FA67 /* JoinClassViewController.swift */; };
+		9294D0291E3D356200E5FA67 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294D0281E3D356200E5FA67 /* TestViewController.swift */; };
 		92A4518F1E3CCDA9002F8146 /* PopQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A4518E1E3CCDA9002F8146 /* PopQuizTableViewCell.swift */; };
 		92C71FFC1E3C73D200E7C2B9 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C71FF91E3C73D200E7C2B9 /* ClassesTableViewCell.swift */; };
 		92C71FFD1E3C73D200E7C2B9 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C71FFA1E3C73D200E7C2B9 /* SelectUserViewController.swift */; };
@@ -123,6 +124,7 @@
 		9294D01C1E3CFC1C00E5FA67 /* ClassInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassInfo.swift; path = H2HSDKIntegrationSample/Models/ClassInfo.swift; sourceTree = SOURCE_ROOT; };
 		9294D01D1E3CFC1C00E5FA67 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = H2HSDKIntegrationSample/Models/Student.swift; sourceTree = SOURCE_ROOT; };
 		9294D0261E3D18FF00E5FA67 /* JoinClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinClassViewController.swift; sourceTree = SOURCE_ROOT; };
+		9294D0281E3D356200E5FA67 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = SOURCE_ROOT; };
 		92A4518E1E3CCDA9002F8146 /* PopQuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopQuizTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C71FF91E3C73D200E7C2B9 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C71FFA1E3C73D200E7C2B9 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				924474261E3C628300E5E4B5 /* LaunchScreen.storyboard */,
+				9294D0281E3D356200E5FA67 /* TestViewController.swift */,
 				9294D0141E3CE3E400E5FA67 /* CustomDesign.swift */,
 				9294D0181E3CF0EC00E5FA67 /* SettingsViewController.swift */,
 				9294D0261E3D18FF00E5FA67 /* JoinClassViewController.swift */,
@@ -432,6 +435,7 @@
 				570C5A171D49B23F000CD7BE /* UserInfo.swift in Sources */,
 				9294D01E1E3CFC1C00E5FA67 /* ClassInfo.swift in Sources */,
 				57344ADB1D4094EE006E2D61 /* LoginTableViewController.swift in Sources */,
+				9294D0291E3D356200E5FA67 /* TestViewController.swift in Sources */,
 				92C7200C1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift in Sources */,
 				9294D0151E3CE3E400E5FA67 /* CustomDesign.swift in Sources */,
 				9294D0271E3D18FF00E5FA67 /* JoinClassViewController.swift in Sources */,

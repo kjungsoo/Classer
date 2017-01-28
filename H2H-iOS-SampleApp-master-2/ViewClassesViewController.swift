@@ -16,6 +16,7 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
     
     var ClassList:[ClassInfo] = [ClassInfo]()
     
+    var imageList = ["prof1", "prof2", "prof3", "prof4", "prof5", "prof6" ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,8 +101,7 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
         cell.classDescription.text = course.classDescription
         cell.classTitle.text = course.name
         cell.classSchedule.text = course.StartTime
-        //add image cell.portrait =
-        
+        cell.portrait.image = UIImage(named: "prof1.png")
       
         
         return cell
