@@ -26,7 +26,7 @@ class ScheduleMeetingTableViewController : UITableViewController, SelectedString
     @IBOutlet weak var textFieldMeetingSubject: UITextField!
 
     // cell meeting description
-    @IBOutlet weak var textFieldMeetingDescription: UITextField!
+    @IBOutlet weak var textFieldMeetingDescription: UITextView!
     
     // cell invite attendees
     @IBOutlet weak var textFieldAttendee1Email: UITextField!

@@ -38,6 +38,7 @@
 		92C720041E3C800B00E7C2B9 /* MyClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720031E3C800B00E7C2B9 /* MyClassesViewController.swift */; };
 		92C720061E3C857600E7C2B9 /* MyClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */; };
 		92C720081E3C955C00E7C2B9 /* DetailClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */; };
+		92C7200A1E3C9A2A00E7C2B9 /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */; };
 		D0521BF21E3B733B00377C9D /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BEE1E3B733B00377C9D /* Charts.framework */; };
 		D0521BF31E3B733B00377C9D /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BEF1E3B733B00377C9D /* CocoaAsyncSocket.framework */; };
 		D0521BF41E3B733B00377C9D /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BF01E3B733B00377C9D /* CocoaLumberjack.framework */; };
@@ -114,6 +115,7 @@
 		92C720031E3C800B00E7C2B9 /* MyClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassesViewController.swift; sourceTree = SOURCE_ROOT; };
 		92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailClassViewController.swift; sourceTree = SOURCE_ROOT; };
+		92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = SOURCE_ROOT; };
 		D0521BEE1E3B733B00377C9D /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		D0521BEF1E3B733B00377C9D /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		D0521BF01E3B733B00377C9D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */,
 				92C720031E3C800B00E7C2B9 /* MyClassesViewController.swift */,
 				924474281E3C628300E5E4B5 /* Main.storyboard */,
+				92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */,
 				92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */,
 			);
 			path = Storyboards;
@@ -397,6 +400,7 @@
 			files = (
 				570C5A1A1D49B745000CD7BE /* CoreController.swift in Sources */,
 				57DD7BB01D464A4000CB411E /* ScheduleMeetingTableViewController.swift in Sources */,
+				92C7200A1E3C9A2A00E7C2B9 /* CreateClassViewController.swift in Sources */,
 				92C720081E3C955C00E7C2B9 /* DetailClassViewController.swift in Sources */,
 				92C71FFC1E3C73D200E7C2B9 /* ClassesTableViewCell.swift in Sources */,
 				57DD7BAC1D46034800CB411E /* GUIUtility.swift in Sources */,

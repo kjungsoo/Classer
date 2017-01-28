@@ -18,9 +18,20 @@ class DetailClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        let backButton = UIBarButtonItem(title: "Add Quiz", style: UIBarButtonItemStyle.Plain, target: self, action: "addQuiz")
+        navigationItem.rightBarButtonItem = backButton
+        
     }
     
+    
+  
+    func addQuiz() {
+        
+        //go to new VC
+        //Update Poles
+        // Do something
+    }
     func fillDetail(){
         classTitle.text = "xya"
         authorTitle.text = "abc"

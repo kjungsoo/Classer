@@ -39,6 +39,7 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
     }
     func createClass() {
         // Do something
+        performSegueWithIdentifier("createClassSegue", sender: nil)
     }
     
 
