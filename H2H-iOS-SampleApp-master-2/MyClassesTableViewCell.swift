@@ -25,3 +25,26 @@ class MyClassesTableViewCell: UITableViewCell {
     }
 
 }
+
+class PopQuizTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var Question: UILabel!
+    @IBOutlet weak var option1: UILabel!
+    @IBOutlet weak var option2: UILabel!
+    @IBOutlet weak var option3: UILabel!
+    @IBOutlet weak var option4: UILabel!
+    
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}

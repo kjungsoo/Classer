@@ -39,6 +39,7 @@
 		92C720061E3C857600E7C2B9 /* MyClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */; };
 		92C720081E3C955C00E7C2B9 /* DetailClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */; };
 		92C7200A1E3C9A2A00E7C2B9 /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */; };
+		92C7200C1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C7200B1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift */; };
 		D0521BF21E3B733B00377C9D /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BEE1E3B733B00377C9D /* Charts.framework */; };
 		D0521BF31E3B733B00377C9D /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BEF1E3B733B00377C9D /* CocoaAsyncSocket.framework */; };
 		D0521BF41E3B733B00377C9D /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0521BF01E3B733B00377C9D /* CocoaLumberjack.framework */; };
@@ -116,6 +117,7 @@
 		92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailClassViewController.swift; sourceTree = SOURCE_ROOT; };
 		92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = SOURCE_ROOT; };
+		92C7200B1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePopQuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		D0521BEE1E3B733B00377C9D /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		D0521BEF1E3B733B00377C9D /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		D0521BF01E3B733B00377C9D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				92C720051E3C857600E7C2B9 /* MyClassesTableViewCell.swift */,
 				92C720031E3C800B00E7C2B9 /* MyClassesViewController.swift */,
 				924474281E3C628300E5E4B5 /* Main.storyboard */,
+				92C7200B1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift */,
 				92C720091E3C9A2A00E7C2B9 /* CreateClassViewController.swift */,
 				92C720071E3C955C00E7C2B9 /* DetailClassViewController.swift */,
 			);
@@ -407,6 +410,7 @@
 				57DD7BAE1D46213400CB411E /* JoinMeetingTableViewController.swift in Sources */,
 				570C5A171D49B23F000CD7BE /* UserInfo.swift in Sources */,
 				57344ADB1D4094EE006E2D61 /* LoginTableViewController.swift in Sources */,
+				92C7200C1E3CB2A500E7C2B9 /* CreatePopQuizViewController.swift in Sources */,
 				92C71FFD1E3C73D200E7C2B9 /* SelectUserViewController.swift in Sources */,
 				57344AE01D41EDBE006E2D61 /* SelectionListViewController.swift in Sources */,
 				57344AD91D408F4A006E2D61 /* SignUpTableViewController.swift in Sources */,
