@@ -329,7 +329,7 @@
 				TargetAttributes = {
 					5740B7E21D3F60B000DB011C = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 467MTJSPA6;
+						DevelopmentTeam = 49X3R4MV84;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -564,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jules Moffat (G2Z47CX32S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 467MTJSPA6;
+				DEVELOPMENT_TEAM = 49X3R4MV84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jules Moffat (G2Z47CX32S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 467MTJSPA6;
+				DEVELOPMENT_TEAM = 49X3R4MV84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

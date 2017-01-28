@@ -14,6 +14,8 @@ class DetailClassViewController: UIViewController {
     @IBOutlet weak var descriptionTitle: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var course:ClassInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,9 @@ class DetailClassViewController: UIViewController {
         
         let backButton = UIBarButtonItem(title: "Add Quiz", style: UIBarButtonItemStyle.Plain, target: self, action: "addQuiz")
         navigationItem.rightBarButtonItem = backButton
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        self.course = appDelegate.course
+        fillDetail()
     }
     
     
@@ -33,10 +37,10 @@ class DetailClassViewController: UIViewController {
         // Do something
     }
     func fillDetail(){
-        classTitle.text = "xya"
-        authorTitle.text = "abc"
-        descriptionTitle.text = "description"
-        time.text = "time"
+        classTitle.text = course?.name
+        authorTitle.text = course?.profName
+        descriptionTitle.text = course?.classDescription
+        time.text = course?.StartTime
     }
 
     override func didReceiveMemoryWarning() {
