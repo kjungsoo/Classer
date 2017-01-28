@@ -20,7 +20,8 @@ class ClassSession{
     var roomID: String?
 
     init(snapshot: FIRDataSnapshot){
-       self.title = snapshot
-        
+        self.title = snapshot.value!["meetingID"] as? String
+        self.name = snapshot.value!["name"] as? String
+        self.description = snapshot.value!["prof"] as? String
     }
 }
