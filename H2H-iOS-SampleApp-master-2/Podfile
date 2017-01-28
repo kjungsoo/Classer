@@ -7,5 +7,6 @@ target 'H2HSDKIntegrationSample' do
   pod  'CocoaAsyncSocket'
   pod 'CocoaLumberjack’, ‘2.2.0’
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end
