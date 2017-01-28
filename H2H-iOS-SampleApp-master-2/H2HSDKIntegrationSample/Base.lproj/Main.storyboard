@@ -700,6 +700,9 @@
                                             <constraint firstAttribute="height" constant="40" id="ab1-rh-06O"/>
                                         </constraints>
                                         <state key="normal" title="Create Class"/>
+                                        <connections>
+                                            <action selector="createClass:" destination="KtE-VA-1QW" eventType="touchUpInside" id="DHc-Sb-lz7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -714,6 +717,15 @@
                             <constraint firstItem="kv0-6r-D2h" firstAttribute="top" secondItem="ZIn-dm-yMd" secondAttribute="bottom" constant="20" id="uV8-sy-rpp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelSelectedEndDate" destination="Ion-57-3zq" id="v92-aG-PXj"/>
+                        <outlet property="labelSelectedStartDate" destination="5Ft-ck-ZWH" id="7De-tH-nwe"/>
+                        <outlet property="switchPublicMeeting" destination="iJh-09-Os4" id="a8H-lO-PgB"/>
+                        <outlet property="switchRecordMeeting" destination="5NR-vr-a3w" id="2wV-FL-NrH"/>
+                        <outlet property="textFieldMeetingDescription" destination="OVj-SK-RVV" id="6wF-so-vbG"/>
+                        <outlet property="textFieldMeetingSubject" destination="B0n-p6-Rhj" id="Uyb-vO-eCq"/>
+                        <outlet property="textFieldMeetingTitle" destination="Lxv-94-fsH" id="3zE-NQ-NJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5S-jG-Wcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
