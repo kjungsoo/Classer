@@ -12,6 +12,10 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var myClasstableView: UITableView!
     
+    @IBOutlet weak var myClassSegment: UISegmentedControl!
+
+
+    
     var myClasses = ["xya", "abc"]
     override func viewDidLoad() {
         super.viewDidLoad()

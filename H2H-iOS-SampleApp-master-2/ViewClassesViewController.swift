@@ -20,7 +20,7 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
         // navigation title & color
         self.navigationItem.title = "Available Classes"
         self.navigationController?.navigationBar.tintColor
-            = UIColor(red: 255/255.0, green: 107/255.0, blue: 100/255.0, alpha: 1.0)
+            = Constants.Colors.mainColor
         // Create the navigation bar
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 44)) // Offset by 20 pixels vertically to take the status bar into account
         
@@ -29,6 +29,7 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
         
         let backButton = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "createClass")
         navigationItem.rightBarButtonItem = backButton
+        
         
     }
     
@@ -48,15 +49,16 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //segue to specific meeting or description
+        performSegueWithIdentifier("goToDetailSegue", sender: nil)
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: ClassesTableViewCell = tableView.dequeueReusableCellWithIdentifier("ViewClassesCell") as! ClassesTableViewCell
 
         let course = classes[indexPath.row]
         
-        cell.Author.text = " "
-        cell.classDescription.text = " "
-        cell.classTitle.text = "CS 101"
+        cell.Author.text = "By Hamaker "
+        cell.classDescription.text = "Don't take my class "
+        cell.classTitle.text = "CS 101 Intro to programing"
         cell.classSchedule.text = " 232"
         //add image cell.portrait =
         
