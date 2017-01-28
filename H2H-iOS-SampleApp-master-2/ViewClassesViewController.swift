@@ -27,30 +27,17 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
         navigationBar.backgroundColor = UIColor.whiteColor()
         //navigationBar.delegate = self
         
-        // Create a navigation item with a title
-        let navigationItem = UINavigationItem()
+        let backButton = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "createClass")
+        navigationItem.rightBarButtonItem = backButton
         
-        // Create left and right button for navigation item
-        let rightButton = UIBarButtonItem(title: "Right", style: UIBarButtonItemStyle.Plain, target: self, action: "createClass:")
-        
-        // Create two buttons for the navigation item
-        navigationItem.rightBarButtonItem = rightButton
-        
-        // Assign the navigation item to the navigation bar
-        navigationBar.items = [navigationItem]
-        
-        // Make the navigation bar a subview of the current view controller
-        self.view.addSubview(navigationBar)
-        
-        
-              // Do any additional setup after loading the view.
     }
-
+    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func createClass(sender: UIBarButtonItem) {
+    func createClass() {
         // Do something
     }
     
@@ -78,6 +65,92 @@ class ViewClassesViewController: UIViewController, UITableViewDelegate, UITableV
 
     }
     
+    
+    // boilerplate method to for web service call
+    private func requestWithURL(urlString:String, params:Dictionary<String, AnyObject>, action: String, completionHandler:(AnyObject?, NSURLResponse?, NSError?)->Void)
+    {
+        // request URL set
+        let request : NSMutableURLRequest = NSMutableURLRequest (URL: NSURL(string: urlString)!)
+        // request type set
+        request.HTTPMethod = "POST"
+        
+        var jsonData:NSData? = nil
+        do
+        {
+            // convert params to NSData
+            jsonData = try NSJSONSerialization.dataWithJSONObject(params, options: [])
+        }
+        catch let error as NSError {
+            GUIUtility.sharedInstance.dismissLoadingAndDisplayAlertWith( "Error: JSON Parsing",
+                                                                         message: error.localizedDescription)
+            print("json error: \(error.localizedDescription)")
+            return
+        }
+        
+        // convert json in NSData to String
+        let jsonString = String.init(data: jsonData!, encoding: NSUTF8StringEncoding)
+        
+        var body: String = ""
+        if action == "createMeeting"
+        {
+            body = "action=createMeeting&json=" + jsonString!
+            
+            // if action is of type: createMeeting
+            // set apiToken in the header
+            // this api token is recieved from the login web service
+            request.setValue(Core.sharedInstance.userInfo?.apiToken, forHTTPHeaderField: "apiToken")
+        }
+        else if action == "getWebRTCServerList"
+        {
+            body = "json=" + jsonString!
+        }
+        
+        // set request body
+        let bodyEncoded : NSString = body.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())!
+        let httpBody : NSData? = bodyEncoded.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = httpBody
+        
+        // set common other request headers
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue(NSString(format:"%llu", httpBody!.length) as String, forHTTPHeaderField: "Content-Length")
+        
+        //let postDataTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+        let postDataTask = ((UIApplication.sharedApplication().delegate) as! AppDelegate!).getURLSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            do
+            {
+                if let dataUnrapped = data
+                {
+                    let jsonObject = try NSJSONSerialization.JSONObjectWithData(dataUnrapped, options: [])
+                    
+                    let array = jsonObject as? NSMutableArray
+                    if array == nil
+                    {
+                        // in case of create meeting the object is of type dictionary
+                        let dictionary = jsonObject as? NSMutableDictionary
+                        completionHandler(dictionary, response, error)
+                    }
+                    else
+                    {
+                        // in case of server list, object is of type array
+                        completionHandler(array, response, error)
+                    }
+                }
+                else
+                {
+                    print("Error: No data recieved")
+                    GUIUtility.sharedInstance.dismissLoadingAndDisplayAlertWith( "Error: Response",
+                        message: "No data recieved from server")
+                }
+            }
+            catch let error as NSError {
+                print("json error: \(error.localizedDescription)")
+                GUIUtility.sharedInstance.dismissLoadingAndDisplayAlertWith( "Error: JSON Parsing",
+                    message: error.localizedDescription)
+            }
+        })
+        
+        postDataTask.resume()
+    }
     
 
 }
