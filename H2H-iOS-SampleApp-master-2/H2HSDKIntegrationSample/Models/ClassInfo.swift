@@ -19,6 +19,7 @@ class ClassInfo: NSObject {
     
     init(name:String, meetingID:String, profName:String, StartTime:String, Duration:String?, students:[Student], description:String){
         self.name = name
+        self.profName = profName
         self.meetingID = meetingID
         self.StartTime = StartTime
         self.Duration = Duration

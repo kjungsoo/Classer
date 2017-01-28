@@ -15,6 +15,8 @@ class DetailClassViewController: UIViewController {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var portrait: UIImageView!
+    
     var course:ClassInfo?
 
     
@@ -30,6 +32,7 @@ class DetailClassViewController: UIViewController {
         authorTitle.text = course?.profName
         descriptionTitle.text = course?.classDescription
         time.text = course?.StartTime
+        portrait.image = UIImage(named:course!.profName!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +69,7 @@ class DetailClassViewController: UIViewController {
         
         //        hard code here or fetech data from UI
         textFieldEmail = "ss42@stmarys-ca.edu"
-        textFieldMeetingID = "546445441"
+        textFieldMeetingID = "711059624"
         self.view.endEditing(true)
         
         if self.textFieldEmail != "" && self.textFieldMeetingID != ""
